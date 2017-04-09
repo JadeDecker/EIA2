@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.karte {
+    height: 100px;
+    width: 70px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 7px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}

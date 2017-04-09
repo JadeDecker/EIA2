@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 850px;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    float: left;
+    line-height: 100px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.maus {
+    height: 40px;
+    min-width: 20px;
+    line-height: 20px;
+    background: #00ff00;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
