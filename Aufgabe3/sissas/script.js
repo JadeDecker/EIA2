@@ -1,3 +1,10 @@
+/*
+Aufgabe3
+Name: Jade
+Matrikelnummer: 254887
+Datum: 09.04.2017
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
+Er wurde nicht kopiert und nicht diktiert.*/
 function schachbrett () {
     var n = 64;
     var z = 1;
