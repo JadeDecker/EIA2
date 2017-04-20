@@ -24,7 +24,7 @@ var L4_Canvas;
         crc2.stroke();
         drawBerg(150, 125, "#a9a9a9", "#C0C0C0");
         drawBaum(0, 200, "#A0522D ", "#8B4513");
-        drawBaumkrone(40, 125, "#00f00", "#00f00");
+        drawBaumkrone(40, 40, "#00f00", "#00f00");
     }
     function drawBerg(_x, _y, _strokeColor, _fillColor) {
         crc2.beginPath();
@@ -73,6 +73,7 @@ var L4_Canvas;
         crc2.fillStyle = _fillColor;
         crc2.strokeStyle = _strokeColor;
         crc2.moveTo(_x, _y);
+        crc2.lineTo(_x - 40, _y + 40);
         crc2.closePath();
         crc2.fill();
         crc2.stroke();

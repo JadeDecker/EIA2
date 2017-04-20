@@ -29,7 +29,7 @@ namespace L4_Canvas {
 
         drawBerg(150, 125, "#a9a9a9", "#C0C0C0");
         drawBaum(0, 200, "#A0522D ", "#8B4513" );
-        drawBaumkrone(40, 125, "#00f00", "#00f00" );
+        drawBaumkrone(40, 40, "#00f00", "#00f00" );
     }
 
     function drawBerg(_x: number, _y: number, _strokeColor: string, _fillColor: string): void {
@@ -81,7 +81,7 @@ namespace L4_Canvas {
         crc2.fillStyle = _fillColor;
         crc2.strokeStyle = _strokeColor;
         crc2.moveTo(_x , _y );
-
+        crc2.arc(_x ,_y)
         crc2.closePath();
         crc2.fill();
         crc2.stroke();
