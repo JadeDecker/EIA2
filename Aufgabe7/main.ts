@@ -166,10 +166,15 @@ namespace L7_Classes {
     let y: number[] = [];
     let n: number = 10;
     let imgData: ImageData;
-
+    function click(): void {
+        let i: number = bienen.length;
+        bienen[i] = new BieneOO();
+        
+    }
     function init(_event: Event): void {
         console.log("Hallo");
         canvas = document.getElementsByTagName("canvas")[0];
+        canvas.addEventListener("click", click);
         console.log(canvas);
         crc2 = canvas.getContext("2d");
         console.log(crc2);
@@ -181,7 +186,7 @@ namespace L7_Classes {
         crc2.stroke();
         drawBerg(150, 125, "#a9a9a9", "#C0C0C0");
         drawWolke(100, 40, "#E0FFFF");
-        for (let i: number = 0; i < 30; i++) {
+        for (let i: number = 0; i < 10; i++) {
             nektarspender[i] = new Blume1OO((Math.random() * (300 - 150)) + 150, (Math.random() * (200 - 125)) + 125);
         }
         for (var _i = 0; _i < 3; _i++) {
@@ -282,7 +287,7 @@ namespace L7_Classes {
     }
     function animate(): void {
         crc2.putImageData(imgData, 0, 0);
-        for (let i: number = 0; i < n; i++) {
+        for (let i: number = 0; i < bienen.length; i++) {
             let s: BieneOO = bienen[i];
             s.update();
         }

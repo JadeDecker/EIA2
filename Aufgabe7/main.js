@@ -140,9 +140,14 @@ var L7_Classes;
     let y = [];
     let n = 10;
     let imgData;
+    function click() {
+        let i = bienen.length;
+        bienen[i] = new BieneOO();
+    }
     function init(_event) {
         console.log("Hallo");
         canvas = document.getElementsByTagName("canvas")[0];
+        canvas.addEventListener("click", click);
         console.log(canvas);
         crc2 = canvas.getContext("2d");
         console.log(crc2);
@@ -154,7 +159,7 @@ var L7_Classes;
         crc2.stroke();
         drawBerg(150, 125, "#a9a9a9", "#C0C0C0");
         drawWolke(100, 40, "#E0FFFF");
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 10; i++) {
             nektarspender[i] = new Blume1OO((Math.random() * (300 - 150)) + 150, (Math.random() * (200 - 125)) + 125);
         }
         for (var _i = 0; _i < 3; _i++) {
@@ -246,7 +251,7 @@ var L7_Classes;
     }
     function animate() {
         crc2.putImageData(imgData, 0, 0);
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i < bienen.length; i++) {
             let s = bienen[i];
             s.update();
         }
