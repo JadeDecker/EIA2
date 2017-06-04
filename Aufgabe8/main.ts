@@ -11,7 +11,7 @@ In einer Datei weil es in mehreren nicht funktioniert hat muss nochmal scahuen w
 
 ///<reference path="bienen.ts"/>
 namespace L8_Classes {
-    let crc2: CanvasRenderingContext2D;
+    export let crc2: CanvasRenderingContext2D;
     let canvas: HTMLCanvasElement;
     let bienen: BieneOO[] = [];
     let honigbienen: BieneOO[] = [];

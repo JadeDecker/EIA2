@@ -32,14 +32,14 @@ namespace L8_Classes {
         move(): void {
             this.x += (Math.random() * 4 - 2.4) * this.speed;
             if (this.x <= 0) {
-                this.x = canvas.width;
+                this.x = crc2.canvas.width;
             }
             this.y += (Math.random() * 4 - 2) * this.speed;
-            if (this.y > canvas.height) {
+            if (this.y > crc2.canvas.height) {
                 this.y = 0;
             }
             if (this.y < 0) {
-                this.y = canvas.height;
+                this.y = crc2.canvas.height;
             }
         }
         
