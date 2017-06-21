@@ -15,32 +15,8 @@ namespace L8_Classes {
     let canvas: HTMLCanvasElement;
     let bienen: BieneOO[] = [];
     let honigbienen: BieneOO[] = [];
-    let nektarspender: honigbiene[] = [];
+    export let nektarspender: Blume1OO[] = [];
     
-    
-    export class honigbiene extends BieneOO {
-        
-        move(): void {
-            console.log(this.x+" "+Math.round(nektarspender[this.blume].x));
-            console.log(this.y+" "+Math.round(nektarspender[this.blume].y));
-
-            if (this.x == Math.round(nektarspender[this.blume].x) && this.y == Math.round(nektarspender[this.blume].y -40)) {
-                this.blume = Math.floor(Math.random() * (5 - 1)) + 1;;
-            }
-            if (this.x < Math.round(nektarspender[this.blume].x)) {
-                this.x++;
-            }
-            if (this.x > Math.round(nektarspender[this.blume].x)) {
-                this.x--;
-            }
-            if (this.y < Math.round(nektarspender[this.blume].y - 40)) {
-                this.y++;
-            }
-            if (this.y > Math.round(nektarspender[this.blume].y - 40)) {
-                this.y--;
-            }
-        }
-    }
     
     export class Blume {
         x: number;
@@ -49,105 +25,6 @@ namespace L8_Classes {
         constructor(_x: number, _y: number) {
             this.x = _x;
             this.y = _y;
-        }
-    }
-    
-    export class Blume1OO extends Blume {
-        constructor(_x: number, _y: number) {
-            super(_x, _y);
-            this.draw();
-        }
-        
-        draw(): void {
-            crc2.fillStyle = "#32Cd32";
-            crc2.fillRect(this.x, this.y - 30, 2, 30);
-            crc2.fillStyle = "red";
-            crc2.beginPath();
-            crc2.arc(this.x, this.y - 35, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-        
-            crc2.beginPath();
-            crc2.moveTo(this.x - 5, this.y - 35);
-            crc2.lineTo(this.x - 5, this.y - 45);
-            crc2.lineTo(this.x + 5, this.y - 35);
-            crc2.closePath();
-            crc2.fill();
-        
-            crc2.beginPath();
-            crc2.moveTo(this.x - 5, this.y - 35);
-            crc2.lineTo(this.x - 0, this.y - 45);
-            crc2.lineTo(this.x + 5, this.y - 35);
-            crc2.closePath();
-            crc2.fill();
-        
-            crc2.beginPath();
-            crc2.moveTo(this.x - 5, this.y - 35);
-            crc2.lineTo(this.x  + 5, this.y - 45);
-            crc2.lineTo(this.x + 5, this.y - 35);
-            crc2.closePath();
-            crc2.fill();
-        }
-    }
-    
-    export class Blume2OO extends Blume {
-        
-        constructor(_x: number, _y: number) {
-            super(_x, _y);
-            this.draw();
-        }
-        
-        draw(): void {
-            crc2.fillStyle = "#32Cd32";
-            crc2.fillRect(this.x, this.y - 30, 2, 30);
-        
-            crc2.fillStyle = "blue";
-            crc2.beginPath();
-            crc2.arc(this.x, this.y - 42, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-            crc2.beginPath();
-            crc2.arc(this.x + 7, this.y - 35, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-            crc2.beginPath();
-            crc2.arc(this.x - 7, this.y - 35, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-            crc2.beginPath();
-            crc2.arc(this.x, this.y - 28, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-        
-            crc2.fillStyle = "yellow";
-            crc2.beginPath();
-            crc2.arc(this.x, this.y - 35, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-        }
-    }
-    
-    export class Blume3OO  extends Blume {
-        constructor(_x: number, _y: number) {
-            super(_x, _y);
-            this.draw();
-        }
-        
-        draw(): void {
-            crc2.fillStyle = "#32Cd32";
-            crc2.fillRect(this.x, this.y - 30, 2, 30);
-        
-            crc2.fillStyle = "yellow";
-            crc2.beginPath();
-            crc2.arc(this.x, this.y - 35, 10, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
-        
-            crc2.fillStyle = "brown";
-            crc2.beginPath();
-            crc2.arc(this.x, this.y - 35, 5, 0, 2 * Math.PI);
-            crc2.closePath();
-            crc2.fill();
         }
     }
     
