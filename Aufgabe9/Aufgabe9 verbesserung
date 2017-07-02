@@ -1,0 +1,25 @@
+Ersetze foreach Funktionen durch:
+
+ for (var _i = 0; _i < NAME.length; _i++) {
+     var index = _i;
+     var element = NAME[_i];
+
+     [[FUNKTIONSINHALT]]
+ }
+
+Beispiel:
+
+ eissorten.forEach(function (element, index, array) {
+     document.getElementById("eissorten").innerHTML += '<select id="eissorte-'+index+'"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option
+     value="3">3</option></select> '+element+'<br>';
+ });
+
+wird zu:
+
+ for (var _i = 0; _i < eissorten.length; _i++) {
+     var index = _i;
+     var element = eissorten[_i];
+
+     document.getElementById("eissorten").innerHTML += '<select id="eissorte-'+index+'"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option
+     value="3">3</option></select> '+element+'<br>';
+}
